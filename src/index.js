@@ -6,7 +6,7 @@ import reportWebVitals from "./reportWebVitals";
 import "jquery";
 import "popper.js/dist/umd/popper";
 import "bootstrap/dist/js/bootstrap";
-import "bootstrap/dist/css";
+import "bootstrap/dist/css/bootstrap.css";
 
 ReactDOM.render(
   <React.StrictMode>
