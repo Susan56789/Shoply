@@ -6,6 +6,11 @@ export default class Home extends Component {
     customersCount: 5,
   };
 
+  //executes when user click on Refresh button
+  onRefreshClick(){
+
+  }
+
   render() {
     return (
       <div>
@@ -14,6 +19,8 @@ export default class Home extends Component {
           <span className="badge badge-secondary m-2 bg-black">
             {this.state.customersCount}
           </span>
+
+          <button className="btn btn-info" onClick={this.onRefreshClick}>Refresh</button>
         </h4>
       </div>
     );
