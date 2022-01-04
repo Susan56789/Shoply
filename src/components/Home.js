@@ -58,6 +58,20 @@ export default class Home extends Component {
     }
   };
 
+  getCustomerRow = () => {
+    return this.state.customers.map((cust) => {
+      return (
+        <tr key={cust.id}>
+          <td>{cust.id}</td>
+          <td>{cust.name}</td>
+          <td>{this.getPhoneToRender(cust.phone)}</td>
+          <td>{cust.address.city}</td>
+          <td>{cust.address.county}</td>
+        </tr>
+      );
+    });
+  };
+
   render() {
     return (
       <div>
@@ -82,19 +96,7 @@ export default class Home extends Component {
               <th>County</th>
             </tr>
           </thead>
-          <tbody>
-            {this.state.customers.map((cust) => {
-              return (
-                <tr key={cust.id}>
-                  <td>{cust.id}</td>
-                  <td>{cust.name}</td>
-                  <td>{this.getPhoneToRender(cust.phone)}</td>
-                  <td>{cust.address.city}</td>
-                  <td>{cust.address.county}</td>
-                </tr>
-              );
-            })}
-          </tbody>
+          <tbody>{this.getCustomerRow()}</tbody>
         </table>
       </div>
     );
