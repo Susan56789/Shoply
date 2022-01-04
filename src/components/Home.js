@@ -2,13 +2,13 @@ import React, { Component } from "react";
 
 export default class Home extends Component {
   state = {
-    appTitle: "Customers",
+    pageTitle: "Customers",
   };
 
   render() {
     return (
       <div>
-        <h4 className="border-bottom m-1 p-1">{this.state.appTitle}</h4>
+        <h4 className="border-bottom m-1 p-1">{this.state.pageTitle}</h4>
       </div>
     );
   }
