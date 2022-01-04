@@ -6,7 +6,7 @@ export default class Navbar extends Component {
   render() {
     return (
       <>
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark navbar-style">
           <a className="navbar-brand" href="/">
             <img src={logo} alt="shopify logo" className="logo-img" />
             Shoply
