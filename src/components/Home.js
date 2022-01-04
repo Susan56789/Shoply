@@ -7,9 +7,11 @@ export default class Home extends Component {
   };
 
   //executes when user click on Refresh button
-  onRefreshClick(){
-
-  }
+  onRefreshClick = () => {
+    this.setState({
+      customersCount: 7,
+    });
+  };
 
   render() {
     return (
@@ -20,7 +22,9 @@ export default class Home extends Component {
             {this.state.customersCount}
           </span>
 
-          <button className="btn btn-info" onClick={this.onRefreshClick}>Refresh</button>
+          <button className="btn btn-info" onClick={this.onRefreshClick}>
+            Refresh
+          </button>
         </h4>
       </div>
     );
