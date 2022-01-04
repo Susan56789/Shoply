@@ -87,7 +87,7 @@ export default class ShoppingCart extends Component {
                 image={prod.image}
                 description={prod.description}
               >
-                <button className="btn btn-info">Buy Now</button>
+                <button className="btn btn-primary">Buy Now</button>
               </Product>
             );
           })}
