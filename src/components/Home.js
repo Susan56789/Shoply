@@ -70,7 +70,7 @@ export default class Home extends Component {
         <tr key={cust.id}>
           <td>{cust.id}</td>
           <td>
-            <img src={cust.photo} alt="user-profile" />
+            <img className="user-img" src={cust.photo} alt="user-profile" />
           </td>
           <td>{cust.name}</td>
           <td>{this.getPhoneToRender(cust.phone)}</td>
