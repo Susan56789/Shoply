@@ -10,35 +10,41 @@ export default class Home extends Component {
         name: "Jane Mumbi",
         phone: "0709775241",
         address: { city: "Mombasa", county: "Mombasa" },
+        photo: "https://picsum.photos/id/1067/60",
       },
       {
         id: 2,
         name: "John Kamau",
         phone: "0729435241",
         address: { city: "Nakuru", county: "Nakuru" },
+        photo: "https://picsum.photos/id/1012/60",
       },
       {
         id: 3,
         name: "Alex Opiyo",
         address: { city: "Nairobi", county: "Nairobi" },
+        photo: "https://picsum.photos/id/1013/60",
       },
       {
         id: 4,
         name: "Mary Atieno",
         phone: "0721235241",
         address: { city: "Kisumu", county: "Kisumu" },
+        photo: "https://picsum.photos/id/1023/60",
       },
       {
         id: 5,
         name: "Mark Wafula",
         phone: "0732665241",
         address: { city: "Bungoma", county: "Bungoma" },
+        photo: "https://picsum.photos/id/1011/60",
       },
       {
         id: 6,
         name: "Stella Mwanza",
         phone: "0742655241",
         address: { city: "Nanyuki", county: "Laikipia" },
+        photo: "https://picsum.photos/id/1015/60",
       },
     ],
   };
@@ -63,6 +69,9 @@ export default class Home extends Component {
       return (
         <tr key={cust.id}>
           <td>{cust.id}</td>
+          <td>
+            <img src={cust.photo} alt="user-profile" />
+          </td>
           <td>{cust.name}</td>
           <td>{this.getPhoneToRender(cust.phone)}</td>
           <td>{cust.address.city}</td>
@@ -90,6 +99,7 @@ export default class Home extends Component {
           <thead>
             <tr>
               <th>#</th>
+              <th>Photo</th>
               <th>Customer Name</th>
               <th>Phone</th>
               <th>City</th>
