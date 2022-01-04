@@ -20,7 +20,6 @@ export default class Home extends Component {
       {
         id: 3,
         name: "Alex Opiyo",
-
         address: { city: "Nairobi", county: "Nairobi" },
       },
       {
@@ -49,6 +48,14 @@ export default class Home extends Component {
     this.setState({
       customersCount: 7,
     });
+  };
+
+  getPhoneToRender = (phone) => {
+    if (phone) {
+      return phone;
+    } else {
+      return <div className="bg-warning p-2 text-center">No Phone</div>;
+    }
   };
 
   render() {
@@ -81,7 +88,7 @@ export default class Home extends Component {
                 <tr key={cust.id}>
                   <td>{cust.id}</td>
                   <td>{cust.name}</td>
-                  <td>{cust.phone == null ? "No Phone" : cust.phone}</td>
+                  <td>{this.getPhoneToRender(cust.phone)}</td>
                   <td>{cust.address.city}</td>
                   <td>{cust.address.county}</td>
                 </tr>
