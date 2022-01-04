@@ -16,10 +16,11 @@ export default class Product extends Component {
               Ksh: {this.props.price}
             </h5>
             <p className="card-text text-muted">
-              Quantity: {this.props.quantity}
+              Available: {this.props.quantity}
             </p>
             <p className="card-text">{this.props.description}</p>
           </div>
+          <div className="card-footer text-left">{this.props.children}</div>
         </div>
       </div>
     );

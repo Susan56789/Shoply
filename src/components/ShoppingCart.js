@@ -9,7 +9,7 @@ export default class ShoppingCart extends Component {
         productName: "iPhone",
         price: 35000,
         quatity: 2,
-        description:"Good",
+        description: "Good",
         image:
           "https://images.unsplash.com/photo-1603891128711-11b4b03bb138?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aXBob25lJTIwMTF8ZW58MHx8MHx8&auto=format&fit=crop&w=700&q=60",
       },
@@ -18,7 +18,7 @@ export default class ShoppingCart extends Component {
         productName: "Samsung S21",
         price: 105000,
         quatity: 10,
-        description:"Good",
+        description: "Good",
         image:
           "https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c2Ftc3VuZyUyMHMyMXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=700&q=60",
       },
@@ -27,7 +27,7 @@ export default class ShoppingCart extends Component {
         productName: "Headphones",
         price: 1500,
         quatity: 5,
-        description:"Good",
+        description: "Good",
         image:
           "https://media.istockphoto.com/photos/pink-headphones-picture-id1289318271?b=1&k=20&m=1289318271&s=170667a&w=0&h=02HeJjH6cjikL0SIthX_SHVAZuxMhzTEWBNSQ0sBWTA=",
       },
@@ -36,7 +36,7 @@ export default class ShoppingCart extends Component {
         productName: "HP Laptop",
         price: 21000,
         quatity: 3,
-        description:"Good",
+        description: "Good",
         image:
           "https://media.istockphoto.com/photos/laptop-picture-id90616136?b=1&k=20&m=90616136&s=170667a&w=0&h=3C88O8eBepFiROPkqm6yPvcjjANjLnwBP3hu3JuQ3k8=",
       },
@@ -45,7 +45,7 @@ export default class ShoppingCart extends Component {
         productName: "PoweBank",
         price: 200,
         quatity: 5,
-        description:"Good",
+        description: "Good",
         image:
           "https://images.unsplash.com/photo-1586253634019-c77872f966f0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cG93ZXJiYW5rfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=700&q=60",
       },
@@ -54,7 +54,7 @@ export default class ShoppingCart extends Component {
         productName: "Microwave",
         price: 9500,
         quatity: 10,
-        description:"Good",
+        description: "Good",
         image:
           "https://media.istockphoto.com/photos/modern-microwave-oven-picture-id139406154?b=1&k=20&m=139406154&s=170667a&w=0&h=Y3lNEt5oSTvQvbwijoFIra6fEhPhntT5fdReVHwxSJs=",
       },
@@ -63,7 +63,7 @@ export default class ShoppingCart extends Component {
         productName: "Mini Bluetooth Speaker",
         price: 1500,
         quatity: 2,
-        description:"Good",
+        description: "Good",
         image:
           "https://media.istockphoto.com/photos/portable-bluetooth-speaker-picture-id1129572489?b=1&k=20&m=1129572489&s=170667a&w=0&h=XYgU6HGlbISnLfUAALq26Z94nYjZm04F2i1Gnz0xcLw=",
       },
@@ -86,7 +86,9 @@ export default class ShoppingCart extends Component {
                 quantity={prod.quatity}
                 image={prod.image}
                 description={prod.description}
-              />
+              >
+                <button className="btn btn-info">Buy Now</button>
+              </Product>
             );
           })}
         </div>
