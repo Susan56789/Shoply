@@ -20,7 +20,7 @@ export default class Home extends Component {
       {
         id: 3,
         name: "Alex Opiyo",
-        phone: "0791215241",
+
         address: { city: "Nairobi", county: "Nairobi" },
       },
       {
@@ -81,7 +81,7 @@ export default class Home extends Component {
                 <tr key={cust.id}>
                   <td>{cust.id}</td>
                   <td>{cust.name}</td>
-                  <td>{cust.phone}</td>
+                  <td>{cust.phone == null ? "No Phone" : cust.phone}</td>
                   <td>{cust.address.city}</td>
                   <td>{cust.address.county}</td>
                 </tr>
