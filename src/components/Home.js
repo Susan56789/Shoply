@@ -64,13 +64,35 @@ export default class Home extends Component {
     }
   };
 
+  //executes when the user click on "Chang Picture" button in the grid
+  //Receives the "customer" object and index of the currently clicked customer
+  onChangePictureClick = (cust, index) => {
+    //get existing customers
+    var custArr = this.state.customers;
+    let id = Math.floor(Math.random() * 1070);
+    custArr[index].photo = `https://picsum.photos/id/${id}/60`;
+
+    //update "customers" array in the state
+    this.setState({ customers: custArr });
+  };
+
   getCustomerRow = () => {
-    return this.state.customers.map((cust) => {
+    return this.state.customers.map((cust, index) => {
       return (
         <tr key={cust.id}>
           <td>{cust.id}</td>
           <td>
             <img className="user-img" src={cust.photo} alt="user-profile" />
+            <div>
+              <button
+                className="btn btn-sm btn-secondary"
+                onClick={() => {
+                  this.onChangePictureClick(cust, index);
+                }}
+              >
+                Change Picture
+              </button>
+            </div>
           </td>
           <td>{cust.name}</td>
           <td>{this.getPhoneToRender(cust.phone)}</td>
