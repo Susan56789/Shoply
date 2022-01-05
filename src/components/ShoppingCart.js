@@ -3,8 +3,8 @@ import Product from "./Product";
 
 export default class ShoppingCart extends Component {
   //executes when the component is mounted
-  constructor() {
-    super(); // calling suoer class's constructor
+  constructor(props) {
+    super(props); // calling suoer class's constructor
 
     //initialization of the state
     this.state = {
@@ -118,7 +118,34 @@ export default class ShoppingCart extends Component {
     }
   };
 
+  //Executes after constructor and render method of current component
+  componentDidMount() {
+    //fetch data from data source
+    console.log("componentDidMount - ShoppingCart");
+  }
+
+  // Executes when there is change in props or state
+  componentDidUpdate(prevProps, prevState) {
+    console.log(
+      "componentDidUpdate= Shopping cart",
+      prevProps,
+      prevState,
+      this.props,
+      this.state
+    );
+
+    //if (prevProps.x !== this.props.x) {
+    // make http call
+    //}
+  }
+
+  //Executes when the current instance of current component is being deleted from memory
+  componentWillUnmount() {
+    console.log("componentWillUnmount - ShoppingCart");
+  }
+
   render() {
+    console.log("render - ShoppingCart");
     return (
       <div className="container-fluid">
         <h4>Shopping Cart</h4>

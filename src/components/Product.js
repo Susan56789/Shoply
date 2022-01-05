@@ -6,6 +6,11 @@ export default class Product extends Component {
     product: this.props.product,
   };
 
+  //Executes when the current instance of current component is being deleted from memory
+  componentWillUnmount() {
+    console.log("componentWillUnmount - Product");
+  }
+
   render() {
     return (
       <div className=" col-lg-3">
